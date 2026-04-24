@@ -14,6 +14,18 @@ Using these inputs, the model calculates key metrics including annualized return
 
 The resulting portfolio is backtested over time and compared against the S&P 500 (SPY), generating an equity curve to evaluate performance relative to the broader market.
 
+## After-Tax Extension
+
+This app includes a simplified after-tax optimization framework that estimates the impact of capital gains taxes, dividend taxes, and turnover costs on expected portfolio returns. The goal is not to create a full tax engine, but to demonstrate how tax-aware assumptions can be incorporated into portfolio construction and optimization.
+
+**Methodology:**
+- Each stock's pre-tax annual return is decomposed into price appreciation and dividend yield (fetched from yfinance where available, defaulting to 0).
+- After-tax return = `price_appreciation × (1 − capital_gains_rate)` + `dividend_yield × (1 − dividend_rate)`
+- A turnover cost term (sum of absolute weight changes × turnover penalty) is subtracted from the Sharpe ratio during optimization, penalizing excessive rebalancing.
+- The optimizer uses the pre-tax Sharpe optimizer's output as the starting allocation to measure realistic transition costs.
+
+**Important:** This is not financial advice. The tax assumptions are simplified and intended for educational and analytical demonstration only. Real-world after-tax optimization requires jurisdiction-specific tax rules, lot-level accounting, and holding-period tracking.
+
 ## Notes
 
 This project was developed under tight time constraints, so I leveraged AI tools to accelerate parts of the implementation. I used them as productivity aids while maintaining ownership over the system design, quantitative logic, and validation of results. In a full development setting, I would further refine the architecture, expand testing, and enhance data handling.
