@@ -14,3 +14,5 @@ Using these inputs, the model calculates risk and return metrics including annua
 Finally, the optimized portfolio is backtested over time and compared against the S&P 500 (SPY) between 2025-current, generating an equity curve to evaluate performance relative to the broader market.
 
 While not a sophisticated model by any means, I hope it demonstrates key traits (both technical and character-wise) valuable to the team. I'm looking forward to connecting!
+
+Note: This project was built under a tight time constraint, so I leveraged AI tools to accelerate development. I treated them as productivity aids rather than decision-makers, and focused on structuring the logic, validating outputs, and ensuring the overall design reflects how I approach building quantitative systems. With more time, I would further refine, extend the implementation, and restructure the database.
