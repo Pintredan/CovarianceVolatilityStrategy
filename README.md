@@ -2,6 +2,7 @@
 
 Built in a few hours for a job application, this project showcases how I approach quantitative analysis and financial tool development. It emphasizes clean structure, readability, and translating analytical ideas into practical, usable tools. With more time, I would extend testing, improve data robustness, and expand the modeling framework.
 
+# Link: https://covariancevolatilitystrategy-j8gkkjuqfh7kzzx4ubc2du.streamlit.app/
 ## Investment Strategy
 
 This project implements a data-driven portfolio construction approach combining covariance-based risk modeling with ETF-based factor exposure analysis.
